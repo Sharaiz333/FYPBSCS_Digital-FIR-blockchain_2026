@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1280"
+    height="1160"
+    viewBox="0 0 1280 1160"
+    content='&lt;?xml version="1.0" encoding="UTF-8"?&gt;&#10;&lt;mxfile&#10;    host="app.diagrams.net"&#10;    modified="2026-10-01T00:00:00.000Z"&#10;    agent="Mozilla/5.0"&#10;    version="24.7.17"&#10;    type="device"&gt;&#10;&#10;    &lt;diagram&#10;        id="system-architecture"&#10;        name="System Architecture"&gt;&#10;&#10;        &lt;mxGraphModel&#10;            dx="1280"&#10;            dy="1160"&#10;            grid="1"&#10;            gridSize="10"&#10;            guides="1"&#10;            tooltips="1"&#10;            connect="1"&#10;            arrows="1"&#10;            fold="1"&#10;            page="1"&#10;            pageScale="1"&#10;            pageWidth="1280"&#10;            pageHeight="1160"&#10;            math="0"&#10;            shadow="0"&#10;            background="#FFFFFF"&gt;&#10;&#10;            &lt;root&gt;&#10;                &lt;mxCell id="0"/&gt;&lt;mxCell id="1" parent="0"/&gt;&lt;mxCell id="system_title" value="System Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="0" y="10" width="1280" height="45" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="user_layer" style="whiteSpace=wrap;html=1;fillColor=#F3F3F3;strokeColor=#555555;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="10" y="70" width="1260" height="200" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="user_layer_strip" style="whiteSpace=wrap;html=1;fillColor=#D7D7D7;strokeColor=#555555;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="10" y="70" width="155" height="200" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="user_layer_label" value="User Layer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=17;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="15" y="135.0" width="145" height="70" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="presentation_layer" style="whiteSpace=wrap;html=1;fillColor=#F3F3F3;strokeColor=#555555;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="10" y="300" width="1260" height="135" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="presentation_layer_strip" style="whiteSpace=wrap;html=1;fillColor=#D7D7D7;strokeColor=#555555;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="10" y="300" width="155" height="135" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="presentation_layer_label" value="Presentation&amp;lt;br&amp;gt;Layer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=17;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="15" y="332.5" width="145" height="70" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="communication_layer" style="whiteSpace=wrap;html=1;fillColor=#F3F3F3;strokeColor=#555555;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="10" y="465" width="1260" height="125" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="communication_layer_strip" style="whiteSpace=wrap;html=1;fillColor=#D7D7D7;strokeColor=#555555;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="10" y="465" width="155" height="125" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="communication_layer_label" value="Communication&amp;lt;br&amp;gt;Layer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=17;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="15" y="492.5" width="145" height="70" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="application_layer" style="whiteSpace=wrap;html=1;fillColor=#F3F3F3;strokeColor=#555555;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="10" y="610" width="1260" height="170" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="application_layer_strip" style="whiteSpace=wrap;html=1;fillColor=#D7D7D7;strokeColor=#555555;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="10" y="610" width="155" height="170" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="application_layer_label" value="Application&amp;lt;br&amp;gt;Layer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=17;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="15" y="660.0" width="145" height="70" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="data_layer" style="whiteSpace=wrap;html=1;fillColor=#F3F3F3;strokeColor=#555555;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="10" y="795" width="1260" height="220" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="data_layer_strip" style="whiteSpace=wrap;html=1;fillColor=#D7D7D7;strokeColor=#555555;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="10" y="795" width="155" height="220" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="data_layer_label" value="Data Layer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=17;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="15" y="870.0" width="145" height="70" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="infrastructure_layer" style="whiteSpace=wrap;html=1;fillColor=#F3F3F3;strokeColor=#555555;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="10" y="1040" width="1260" height="105" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="infrastructure_layer_strip" style="whiteSpace=wrap;html=1;fillColor=#D7D7D7;strokeColor=#555555;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="10" y="1040" width="155" height="105" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="infrastructure_layer_label" value="Infrastructure&amp;lt;br&amp;gt;Layer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=17;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="15" y="1057.5" width="145" height="70" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="users_panel" style="whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="182" y="90" width="706" height="160" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="citizen_icon" style="whiteSpace=wrap;html=1;fillColor=#222222;strokeColor=#222222;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="246" y="108" width="48" height="48" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="citizen_icon_symbol" value="●" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=18;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="246" y="108" width="48" height="48" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="citizen_name" value="Citizen" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=14;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="200" y="165" width="140" height="25" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="citizen_description" value="Submit Complaint /&amp;lt;br&amp;gt;Track Status" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=11;fontColor=#222222;fontStyle=0;" vertex="1" parent="1"&gt;&lt;mxGeometry x="200" y="192" width="140" height="45" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="police_icon" style="whiteSpace=wrap;html=1;fillColor=#222222;strokeColor=#222222;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="426" y="108" width="48" height="48" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="police_icon_symbol" value="●" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=18;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="426" y="108" width="48" height="48" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="police_name" value="Police Officer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=14;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="380" y="165" width="140" height="25" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="police_description" value="Review / Investigate /&amp;lt;br&amp;gt;Update" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=11;fontColor=#222222;fontStyle=0;" vertex="1" parent="1"&gt;&lt;mxGeometry x="380" y="192" width="140" height="45" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="supervisor_icon" style="whiteSpace=wrap;html=1;fillColor=#222222;strokeColor=#222222;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="606" y="108" width="48" height="48" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="supervisor_icon_symbol" value="●" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=18;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="606" y="108" width="48" height="48" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="supervisor_name" value="Supervisor" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=14;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="560" y="165" width="140" height="25" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="supervisor_description" value="Approve / Monitor" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=11;fontColor=#222222;fontStyle=0;" vertex="1" parent="1"&gt;&lt;mxGeometry x="560" y="192" width="140" height="45" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="system_admin_icon" style="whiteSpace=wrap;html=1;fillColor=#222222;strokeColor=#222222;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="761" y="108" width="48" height="48" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="system_admin_icon_symbol" value="●" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=18;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="761" y="108" width="48" height="48" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="system_admin_name" value="System Admin" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=14;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="715" y="165" width="140" height="25" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="system_admin_description" value="Manage Users /&amp;lt;br&amp;gt;Settings" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=11;fontColor=#222222;fontStyle=0;" vertex="1" parent="1"&gt;&lt;mxGeometry x="715" y="192" width="140" height="45" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="frontend" value="&amp;lt;b&amp;gt;React + TypeScript Frontend&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font style=&amp;apos;font-size:12px&amp;apos;&amp;gt;Web Application&amp;lt;/font&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;strokeWidth=1.5;fontColor=#222222;fontFamily=Arial;fontSize=20;spacing=8;align=center;verticalAlign=middle;" vertex="1" parent="1"&gt;&lt;mxGeometry x="188" y="320" width="670" height="96" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="react_icon" value="⚛" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=42;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="245" y="332" width="70" height="60" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="rest_api" value="&amp;lt;b&amp;gt;REST APIs&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font style=&amp;apos;font-size:12px&amp;apos;&amp;gt;HTTP/HTTPS&amp;lt;/font&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;strokeWidth=1.5;fontColor=#222222;fontFamily=Arial;fontSize=20;spacing=8;align=center;verticalAlign=middle;" vertex="1" parent="1"&gt;&lt;mxGeometry x="188" y="485" width="670" height="78" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="api_icon_background" style="whiteSpace=wrap;html=1;fillColor=#222222;strokeColor=#222222;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="325" y="500" width="70" height="45" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="api_icon_text" value="API" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=12;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="325" y="500" width="70" height="45" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="fastapi" value="&amp;lt;b&amp;gt;Python + FastAPI Backend&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font style=&amp;apos;font-size:12px&amp;apos;&amp;gt;Business Logic, Authentication, RBAC,&amp;lt;br&amp;gt;Validation, Workflow Services&amp;lt;/font&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;strokeWidth=1.5;fontColor=#222222;fontFamily=Arial;fontSize=20;spacing=8;align=center;verticalAlign=middle;" vertex="1" parent="1"&gt;&lt;mxGeometry x="188" y="630" width="665" height="130" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="python_icon_background" style="whiteSpace=wrap;html=1;fillColor=#222222;strokeColor=#222222;strokeWidth=1.5;rounded=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="270" y="660" width="65" height="55" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="python_icon_text" value="Py" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=18;fontColor=#FFFFFF;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="270" y="660" width="65" height="55" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="postgres" value="&amp;lt;b&amp;gt;PostgreSQL&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font style=&amp;apos;font-size:12px&amp;apos;&amp;gt;Structured Data,&amp;lt;br&amp;gt;Database Storage&amp;lt;/font&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;strokeWidth=1.5;fontColor=#222222;fontFamily=Arial;fontSize=18;spacing=8;align=center;verticalAlign=middle;" vertex="1" parent="1"&gt;&lt;mxGeometry x="188" y="815" width="335" height="180" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="postgres_icon" value="●" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=38;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="245" y="840" width="65" height="55" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="file_storage" value="&amp;lt;b&amp;gt;Protected File Storage&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font style=&amp;apos;font-size:12px&amp;apos;&amp;gt;Documents, Images,&amp;lt;br&amp;gt;Evidence Files&amp;lt;/font&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;strokeWidth=1.5;fontColor=#222222;fontFamily=Arial;fontSize=18;spacing=8;align=center;verticalAlign=middle;" vertex="1" parent="1"&gt;&lt;mxGeometry x="523" y="815" width="330" height="180" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="file_icon" value="▰" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=32;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="605" y="840" width="65" height="55" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="blockchain_layer" style="whiteSpace=wrap;html=1;fillColor=#FAFAFA;strokeColor=#333333;strokeWidth=1.5;rounded=1;dashed=1;dashPattern=8 6;" vertex="1" parent="1"&gt;&lt;mxGeometry x="890" y="455" width="380" height="560" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="blockchain_title" value="Integrity &amp;amp;amp; Audit Layer" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=20;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="915" y="472" width="330" height="30" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="blockchain_subtitle" value="(Blockchain)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=15;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="915" y="500" width="330" height="25" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="bc_fastapi" value="&amp;lt;b&amp;gt;FastAPI Backend&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font style=&amp;apos;font-size:12px&amp;apos;&amp;gt;Hashing &amp;amp;amp; Blockchain Operations&amp;lt;/font&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;strokeWidth=1.5;fontColor=#222222;fontFamily=Arial;fontSize=16;spacing=8;align=center;verticalAlign=middle;" vertex="1" parent="1"&gt;&lt;mxGeometry x="915" y="535" width="330" height="70" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="fabric" value="&amp;lt;b&amp;gt;Hyperledger Fabric&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font style=&amp;apos;font-size:12px&amp;apos;&amp;gt;Permissioned Blockchain&amp;lt;/font&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;strokeWidth=1.5;fontColor=#222222;fontFamily=Arial;fontSize=16;spacing=8;align=center;verticalAlign=middle;" vertex="1" parent="1"&gt;&lt;mxGeometry x="915" y="640" width="330" height="70" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="chaincode" value="&amp;lt;b&amp;gt;Chaincode&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font style=&amp;apos;font-size:12px&amp;apos;&amp;gt;Smart Contract Logic&amp;lt;/font&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;strokeWidth=1.5;fontColor=#222222;fontFamily=Arial;fontSize=16;spacing=8;align=center;verticalAlign=middle;" vertex="1" parent="1"&gt;&lt;mxGeometry x="915" y="745" width="330" height="70" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="metadata" value="&amp;lt;b&amp;gt;Hash + Transaction + Audit Metadata&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font style=&amp;apos;font-size:12px&amp;apos;&amp;gt;Stored on Blockchain&amp;lt;/font&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;strokeWidth=1.5;fontColor=#222222;fontFamily=Arial;fontSize=15;spacing=8;align=center;verticalAlign=middle;" vertex="1" parent="1"&gt;&lt;mxGeometry x="915" y="850" width="330" height="95" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="blockchain_fastapi_icon" value="⚡" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="925" y="548" width="50" height="35" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="fabric_icon" value="◇" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=28;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="925" y="653" width="50" height="35" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="chaincode_icon" value="&amp;amp;lt;/&amp;amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=16;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="925" y="758" width="50" height="35" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="metadata_icon" value="✓" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=22;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="925" y="873" width="50" height="35" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="infrastructure_card" value="&amp;lt;b&amp;gt;Servers / Cloud Environment&amp;lt;/b&amp;gt;&amp;lt;br&amp;gt;&amp;lt;font style=&amp;apos;font-size:12px&amp;apos;&amp;gt;Hosting, Security, Backup&amp;lt;/font&amp;gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#555555;strokeWidth=1.5;fontColor=#222222;fontFamily=Arial;fontSize=18;spacing=8;align=center;verticalAlign=middle;" vertex="1" parent="1"&gt;&lt;mxGeometry x="188" y="1057" width="880" height="70" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="server_icon" value="▤" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;fontSize=32;fontColor=#222222;fontStyle=1;" vertex="1" parent="1"&gt;&lt;mxGeometry x="450" y="1068" width="60" height="45" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="user_to_frontend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#333333;strokeWidth=1.5;" edge="1" source="users_panel" target="frontend" parent="1"&gt;&lt;mxGeometry relative="1" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="frontend_to_api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#333333;strokeWidth=1.5;" edge="1" source="frontend" target="rest_api" parent="1"&gt;&lt;mxGeometry relative="1" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="api_to_backend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#333333;strokeWidth=1.5;" edge="1" source="rest_api" target="fastapi" parent="1"&gt;&lt;mxGeometry relative="1" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="backend_to_database" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#333333;strokeWidth=1.5;" edge="1" source="fastapi" target="postgres" parent="1"&gt;&lt;mxGeometry relative="1" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="database_to_infrastructure" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#333333;strokeWidth=1.5;" edge="1" source="postgres" target="infrastructure_card" parent="1"&gt;&lt;mxGeometry relative="1" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="blockchain_fastapi_to_fabric" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#333333;strokeWidth=1.5;" edge="1" source="bc_fastapi" target="fabric" parent="1"&gt;&lt;mxGeometry relative="1" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="fabric_to_chaincode" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#333333;strokeWidth=1.5;" edge="1" source="fabric" target="chaincode" parent="1"&gt;&lt;mxGeometry relative="1" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="chaincode_to_metadata" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#333333;strokeWidth=1.5;" edge="1" source="chaincode" target="metadata" parent="1"&gt;&lt;mxGeometry relative="1" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="backend_to_blockchain" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#333333;strokeWidth=1.5;startArrow=classic;startFill=1;" edge="1" source="fastapi" target="bc_fastapi" parent="1"&gt;&lt;mxGeometry relative="1" as="geometry"/&gt;&lt;/mxCell&gt;&lt;mxCell id="file_storage_to_blockchain" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeColor=#333333;strokeWidth=1.5;startArrow=classic;startFill=1;" edge="1" source="file_storage" target="metadata" parent="1"&gt;&lt;mxGeometry relative="1" as="geometry"/&gt;&lt;/mxCell&gt;&#10;            &lt;/root&gt;&#10;&#10;        &lt;/mxGraphModel&gt;&#10;&#10;    &lt;/diagram&gt;&#10;&#10;&lt;/mxfile&gt;&#10;'>
+
+    <defs>
+
+        <marker
+            id="arrow"
+            markerWidth="10"
+            markerHeight="10"
+            refX="8"
+            refY="3"
+            orient="auto">
+
+            <path
+                d="M0,0 L8,3 L0,6 Z"
+                fill="#333333"/>
+
+        </marker>
+
+    </defs>
+
+
+    <!-- ================================================= -->
+    <!-- WHITE BACKGROUND -->
+    <!-- ================================================= -->
+
+    <rect
+        x="0"
+        y="0"
+        width="1280"
+        height="1160"
+        fill="#FFFFFF"/>
+
+
+    <!-- ================================================= -->
+    <!-- TITLE -->
+    <!-- ================================================= -->
+
+    <text
+        x="640.0"
+        y="43"
+        text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="28"
+        font-weight="bold"
+        fill="#222222">
+
+        System Architecture
+
+    </text>
+
+
+    <!-- ================================================= -->
+    <!-- USER LAYER -->
+    <!-- ================================================= -->
+
+    <rect
+        x="10"
+        y="70"
+        width="1260"
+        height="200"
+        rx="12"
+        fill="#F3F3F3"
+        stroke="#555555"
+        stroke-width="1.5"/>
+
+    <rect
+        x="10"
+        y="70"
+        width="155"
+        height="200"
+        rx="12"
+        fill="#D7D7D7"
+        stroke="#555555"/>
+
+    <text
+        x="87"
+        y="170"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="18"
+        font-weight="bold">
+
+        User Layer
+
+    </text>
+
+
+    <rect
+        x="182"
+        y="90"
+        width="706"
+        height="160"
+        rx="9"
+        fill="#FFFFFF"
+        stroke="#555555"
+        stroke-width="1.7"/>
+
+
+    <!-- Citizen -->
+
+    <circle
+        cx="270"
+        cy="125"
+        r="18"
+        fill="#222222"/>
+
+    <text
+        x="270"
+        y="178"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="15"
+        font-weight="bold">
+
+        Citizen
+
+    </text>
+
+    <text
+        x="270"
+        y="200"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Submit Complaint /
+
+    </text>
+
+    <text
+        x="270"
+        y="218"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Track Status
+
+    </text>
+
+
+    <!-- Police Officer -->
+
+    <circle
+        cx="450"
+        cy="125"
+        r="18"
+        fill="#222222"/>
+
+    <text
+        x="450"
+        y="178"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="15"
+        font-weight="bold">
+
+        Police Officer
+
+    </text>
+
+    <text
+        x="450"
+        y="200"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Review / Investigate /
+
+    </text>
+
+    <text
+        x="450"
+        y="218"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Update
+
+    </text>
+
+
+    <!-- Supervisor -->
+
+    <circle
+        cx="630"
+        cy="125"
+        r="18"
+        fill="#222222"/>
+
+    <text
+        x="630"
+        y="178"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="15"
+        font-weight="bold">
+
+        Supervisor
+
+    </text>
+
+    <text
+        x="630"
+        y="200"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Approve / Monitor
+
+    </text>
+
+
+    <!-- System Admin -->
+
+    <circle
+        cx="785"
+        cy="125"
+        r="18"
+        fill="#222222"/>
+
+    <text
+        x="785"
+        y="178"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="15"
+        font-weight="bold">
+
+        System Admin
+
+    </text>
+
+    <text
+        x="785"
+        y="200"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Manage Users /
+
+    </text>
+
+    <text
+        x="785"
+        y="218"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Settings
+
+    </text>
+
+
+    <!-- ================================================= -->
+    <!-- PRESENTATION -->
+    <!-- ================================================= -->
+
+    <rect
+        x="10"
+        y="300"
+        width="1260"
+        height="135"
+        rx="12"
+        fill="#F3F3F3"
+        stroke="#555555"/>
+
+    <rect
+        x="10"
+        y="300"
+        width="155"
+        height="135"
+        rx="12"
+        fill="#D7D7D7"
+        stroke="#555555"/>
+
+    <text
+        x="87"
+        y="355"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17"
+        font-weight="bold">
+
+        Presentation
+
+    </text>
+
+    <text
+        x="87"
+        y="380"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17"
+        font-weight="bold">
+
+        Layer
+
+    </text>
+
+
+    <rect
+        x="188"
+        y="320"
+        width="670"
+        height="96"
+        rx="9"
+        fill="#FFFFFF"
+        stroke="#555555"
+        stroke-width="1.7"/>
+
+    <text
+        x="523"
+        y="362"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="20"
+        font-weight="bold">
+
+        React + TypeScript Frontend
+
+    </text>
+
+    <text
+        x="523"
+        y="388"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="13">
+
+        Web Application
+
+    </text>
+
+
+    <!-- ================================================= -->
+    <!-- COMMUNICATION -->
+    <!-- ================================================= -->
+
+    <rect
+        x="10"
+        y="465"
+        width="1260"
+        height="125"
+        rx="12"
+        fill="#F3F3F3"
+        stroke="#555555"/>
+
+    <rect
+        x="10"
+        y="465"
+        width="155"
+        height="125"
+        rx="12"
+        fill="#D7D7D7"
+        stroke="#555555"/>
+
+    <text
+        x="87"
+        y="520"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17"
+        font-weight="bold">
+
+        Communication
+
+    </text>
+
+    <text
+        x="87"
+        y="545"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17"
+        font-weight="bold">
+
+        Layer
+
+    </text>
+
+
+    <rect
+        x="188"
+        y="485"
+        width="670"
+        height="78"
+        rx="9"
+        fill="#FFFFFF"
+        stroke="#555555"
+        stroke-width="1.7"/>
+
+    <text
+        x="523"
+        y="520"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="20"
+        font-weight="bold">
+
+        REST APIs
+
+    </text>
+
+    <text
+        x="523"
+        y="545"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="13">
+
+        HTTP / HTTPS
+
+    </text>
+
+
+    <!-- ================================================= -->
+    <!-- APPLICATION -->
+    <!-- ================================================= -->
+
+    <rect
+        x="10"
+        y="610"
+        width="1260"
+        height="170"
+        rx="12"
+        fill="#F3F3F3"
+        stroke="#555555"/>
+
+    <rect
+        x="10"
+        y="610"
+        width="155"
+        height="170"
+        rx="12"
+        fill="#D7D7D7"
+        stroke="#555555"/>
+
+    <text
+        x="87"
+        y="680"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17"
+        font-weight="bold">
+
+        Application
+
+    </text>
+
+    <text
+        x="87"
+        y="705"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17"
+        font-weight="bold">
+
+        Layer
+
+    </text>
+
+
+    <rect
+        x="188"
+        y="630"
+        width="665"
+        height="130"
+        rx="9"
+        fill="#FFFFFF"
+        stroke="#555555"
+        stroke-width="1.7"/>
+
+    <text
+        x="520"
+        y="670"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="20"
+        font-weight="bold">
+
+        Python + FastAPI Backend
+
+    </text>
+
+    <text
+        x="520"
+        y="697"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="13">
+
+        Business Logic, Authentication, RBAC,
+
+    </text>
+
+    <text
+        x="520"
+        y="718"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="13">
+
+        Validation, Workflow Services
+
+    </text>
+
+
+    <!-- ================================================= -->
+    <!-- DATA -->
+    <!-- ================================================= -->
+
+    <rect
+        x="10"
+        y="795"
+        width="1260"
+        height="220"
+        rx="12"
+        fill="#F3F3F3"
+        stroke="#555555"/>
+
+    <rect
+        x="10"
+        y="795"
+        width="155"
+        height="220"
+        rx="12"
+        fill="#D7D7D7"
+        stroke="#555555"/>
+
+    <text
+        x="87"
+        y="900"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17"
+        font-weight="bold">
+
+        Data Layer
+
+    </text>
+
+
+    <rect
+        x="188"
+        y="815"
+        width="335"
+        height="180"
+        rx="9"
+        fill="#FFFFFF"
+        stroke="#555555"
+        stroke-width="1.7"/>
+
+    <text
+        x="355"
+        y="935"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="18"
+        font-weight="bold">
+
+        PostgreSQL
+
+    </text>
+
+    <text
+        x="355"
+        y="958"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Structured Data,
+
+    </text>
+
+    <text
+        x="355"
+        y="977"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Database Storage
+
+    </text>
+
+
+    <rect
+        x="523"
+        y="815"
+        width="330"
+        height="180"
+        rx="9"
+        fill="#FFFFFF"
+        stroke="#555555"
+        stroke-width="1.7"/>
+
+    <text
+        x="688"
+        y="935"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="18"
+        font-weight="bold">
+
+        Protected File Storage
+
+    </text>
+
+    <text
+        x="688"
+        y="958"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Documents, Images,
+
+    </text>
+
+    <text
+        x="688"
+        y="977"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Evidence Files
+
+    </text>
+
+
+    <!-- ================================================= -->
+    <!-- BLOCKCHAIN -->
+    <!-- ================================================= -->
+
+    <rect
+        x="890"
+        y="455"
+        width="380"
+        height="560"
+        rx="12"
+        fill="#FAFAFA"
+        stroke="#333333"
+        stroke-width="2"
+        stroke-dasharray="8 6"/>
+
+    <text
+        x="915"
+        y="490"
+        font-family="Arial"
+        font-size="20"
+        font-weight="bold">
+
+        Integrity &amp; Audit Layer
+
+    </text>
+
+    <text
+        x="915"
+        y="515"
+        font-family="Arial"
+        font-size="15"
+        font-weight="bold">
+
+        (Blockchain)
+
+    </text>
+
+
+    <!-- Blockchain FastAPI -->
+
+    <rect
+        x="915"
+        y="535"
+        width="330"
+        height="70"
+        rx="8"
+        fill="#FFFFFF"
+        stroke="#555555"/>
+
+    <text
+        x="1080"
+        y="575"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="16"
+        font-weight="bold">
+
+        FastAPI Backend
+
+    </text>
+
+    <text
+        x="1080"
+        y="595"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Hashing &amp; Blockchain Operations
+
+    </text>
+
+
+    <!-- Fabric -->
+
+    <rect
+        x="915"
+        y="640"
+        width="330"
+        height="70"
+        rx="8"
+        fill="#FFFFFF"
+        stroke="#555555"/>
+
+    <text
+        x="1080"
+        y="680"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="16"
+        font-weight="bold">
+
+        Hyperledger Fabric
+
+    </text>
+
+    <text
+        x="1080"
+        y="700"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Permissioned Blockchain
+
+    </text>
+
+
+    <!-- Chaincode -->
+
+    <rect
+        x="915"
+        y="745"
+        width="330"
+        height="70"
+        rx="8"
+        fill="#FFFFFF"
+        stroke="#555555"/>
+
+    <text
+        x="1080"
+        y="785"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="16"
+        font-weight="bold">
+
+        Chaincode
+
+    </text>
+
+    <text
+        x="1080"
+        y="805"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Smart Contract Logic
+
+    </text>
+
+
+    <!-- Metadata -->
+
+    <rect
+        x="915"
+        y="850"
+        width="330"
+        height="95"
+        rx="8"
+        fill="#FFFFFF"
+        stroke="#555555"/>
+
+    <text
+        x="1080"
+        y="883"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="15"
+        font-weight="bold">
+
+        Hash + Transaction +
+
+    </text>
+
+    <text
+        x="1080"
+        y="903"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="15"
+        font-weight="bold">
+
+        Audit Metadata
+
+    </text>
+
+    <text
+        x="1080"
+        y="928"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="12">
+
+        Stored on Blockchain
+
+    </text>
+
+
+    <!-- ================================================= -->
+    <!-- INFRASTRUCTURE -->
+    <!-- ================================================= -->
+
+    <rect
+        x="10"
+        y="1040"
+        width="1260"
+        height="105"
+        rx="12"
+        fill="#F3F3F3"
+        stroke="#555555"/>
+
+    <rect
+        x="10"
+        y="1040"
+        width="155"
+        height="105"
+        rx="12"
+        fill="#D7D7D7"
+        stroke="#555555"/>
+
+    <text
+        x="87"
+        y="1082"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17"
+        font-weight="bold">
+
+        Infrastructure
+
+    </text>
+
+    <text
+        x="87"
+        y="1107"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="17"
+        font-weight="bold">
+
+        Layer
+
+    </text>
+
+
+    <rect
+        x="188"
+        y="1057"
+        width="880"
+        height="70"
+        rx="9"
+        fill="#FFFFFF"
+        stroke="#555555"
+        stroke-width="1.7"/>
+
+    <text
+        x="628"
+        y="1090"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="18"
+        font-weight="bold">
+
+        Servers / Cloud Environment
+
+    </text>
+
+    <text
+        x="628"
+        y="1112"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="13">
+
+        Hosting, Security, Backup
+
+    </text>
+
+
+    <!-- ================================================= -->
+    <!-- ARROWS -->
+    <!-- ================================================= -->
+
+    <line
+        x1="535"
+        y1="270"
+        x2="535"
+        y2="320"
+        stroke="#333333"
+        stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+    <line
+        x1="535"
+        y1="435"
+        x2="535"
+        y2="485"
+        stroke="#333333"
+        stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+    <line
+        x1="535"
+        y1="590"
+        x2="535"
+        y2="630"
+        stroke="#333333"
+        stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+    <line
+        x1="535"
+        y1="780"
+        x2="535"
+        y2="815"
+        stroke="#333333"
+        stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+    <line
+        x1="355"
+        y1="995"
+        x2="355"
+        y2="1057"
+        stroke="#333333"
+        stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+
+    <!-- Blockchain arrows -->
+
+    <line
+        x1="1080"
+        y1="605"
+        x2="1080"
+        y2="640"
+        stroke="#333333"
+        stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+    <line
+        x1="1080"
+        y1="710"
+        x2="1080"
+        y2="745"
+        stroke="#333333"
+        stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+    <line
+        x1="1080"
+        y1="815"
+        x2="1080"
+        y2="850"
+        stroke="#333333"
+        stroke-width="2"
+        marker-end="url(#arrow)"/>
+
+</svg>
