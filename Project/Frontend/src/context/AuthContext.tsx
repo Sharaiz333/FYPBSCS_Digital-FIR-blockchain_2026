@@ -1,34 +1,24 @@
 import { createContext, ReactNode, useContext, useState } from "react";
-
-export type RoleName =
-  | "citizen"
-  | "police_officer"
-  | "investigating_officer"
-  | "supervisory_officer"
-  | "audit_review_officer"
-  | "admin";
-
-interface MockAuthState {
-  fullName: string;
-  role: RoleName;
-}
+import { AuthState } from "../types/auth";
+import { getStoredAuth, loginRequest, logoutRequest } from "../services/auth";
 
 interface AuthContextValue {
-  auth: MockAuthState | null;
-  login: (fullName: string, role: RoleName) => void;
+  auth: AuthState | null;
+  login: (username: string, password: string) => Promise<void>;
   logout: () => void;
 }
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
-  const [auth, setAuth] = useState<MockAuthState | null>(null);
+  const [auth, setAuth] = useState<AuthState | null>(getStoredAuth());
 
-  function login(fullName: string, role: RoleName) {
-    setAuth({ fullName, role });
+  async function login(username: string, password: string) {
+    setAuth(await loginRequest(username, password));
   }
 
   function logout() {
+    logoutRequest();
     setAuth(null);
   }
 

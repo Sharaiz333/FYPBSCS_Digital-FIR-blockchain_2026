@@ -1,4 +1,4 @@
-import { useAuth } from "../context/MockAuthContext";
+import { useAuth } from "../context/AuthContext";
 
 const ROLE_DESCRIPTIONS: Record<string, string> = {
   citizen: "You'll be able to submit complaints and track their status here.",

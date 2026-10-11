@@ -1,48 +1,78 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth, RoleName } from "../context/MockAuthContext";
+import { useAuth } from "../context/AuthContext";
 
 export default function Login() {
   const navigate = useNavigate();
   const { login } = useAuth();
-  const [email, setEmail] = useState("");
+
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
-  // Temporary test role selector
-  const [mockRole, setMockRole] = useState<RoleName>("citizen");
+  const [error, setError] = useState("");
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (
+    event: FormEvent<HTMLFormElement>
+  ) => {
     event.preventDefault();
+    setError("");
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      login(email || "Test User", mockRole);
+
+    try {
+      await login(username, password);
       navigate("/");
-    }, 500);
+    } catch (err: any) {
+      setError(
+        err?.response?.status === 401
+          ? "Invalid username or password."
+          : "Cannot reach the server. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-slate-50 px-4">
       <div className="w-full max-w-md rounded-xl bg-white p-8 shadow-sm">
-        <h2 className="text-2xl font-bold text-navy-900">Login to Digital FIR</h2>
+        <h2 className="text-2xl font-bold text-navy-900">
+          Login to Digital FIR
+        </h2>
+
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <div>
-            <label className="mb-2 block text-sm font-medium text-slate-700">Email or Username</label>
+            <label
+              htmlFor="username"
+              className="mb-2 block text-sm font-medium text-slate-700"
+            >
+              Username
+            </label>
+
             <input
               type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              id="username"
+              autoComplete="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               className="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm"
               placeholder="Enter username"
               required
             />
           </div>
+
           <div>
-            <label className="mb-2 block text-sm font-medium text-slate-700">Password</label>
+            <label
+              htmlFor="password"
+              className="mb-2 block text-sm font-medium text-slate-700"
+            >
+              Password
+            </label>
+
             <input
               type={showPassword ? "text" : "password"}
+              id="password"
+              autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm"
@@ -51,29 +81,34 @@ export default function Login() {
             />
           </div>
 
-          {/* Temporary Role Selector */}
-          <div>
-            <label className="mb-2 block text-sm font-medium text-slate-700">
-              (Temporary) Test as role
-            </label>
-            <select
-              value={mockRole}
-              onChange={(e) => setMockRole(e.target.value as RoleName)}
-              className="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm"
+          <div className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="showPassword"
+              checked={showPassword}
+              onChange={(e) => setShowPassword(e.target.checked)}
+            />
+            <label
+              htmlFor="showPassword"
+              className="text-sm text-slate-600"
             >
-              <option value="citizen">Citizen</option>
-              <option value="police_officer">Police Officer</option>
-              <option value="investigating_officer">Investigating Officer</option>
-              <option value="supervisory_officer">Supervisory Officer</option>
-              <option value="audit_review_officer">Audit/Review Officer</option>
-              <option value="admin">Administrator</option>
-            </select>
+              Show password
+            </label>
           </div>
+
+          {error && (
+            <div
+              className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+              role="alert"
+            >
+              {error}
+            </div>
+          )}
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full rounded-lg bg-navy-900 py-2.5 text-white font-medium hover:bg-navy-800 transition-colors"
+            className="w-full rounded-lg bg-navy-900 py-2.5 text-white font-medium hover:bg-navy-800 transition-colors disabled:opacity-50"
           >
             {isSubmitting ? "Logging in..." : "Log In"}
           </button>

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/MockAuthContext";
+import { useAuth } from "../context/AuthContext";
 
 const ROLE_LABELS: Record<string, string> = {
   citizen: "Citizen",
