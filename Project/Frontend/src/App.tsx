@@ -4,6 +4,7 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import { Navbar } from "./components/Navbar";
 import Login from "./pages/Login";
 import { DashboardPage } from "./pages/Dashboard";
+import { ComplaintNewPage } from "./pages/ComplaintNew";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -25,6 +26,16 @@ function AppRoutes() {
           <ProtectedRoute>
             <Layout>
               <DashboardPage />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/complaints/new"
+        element={
+          <ProtectedRoute allowedRoles={["citizen"]}>
+            <Layout>
+              <ComplaintNewPage />
             </Layout>
           </ProtectedRoute>
         }
