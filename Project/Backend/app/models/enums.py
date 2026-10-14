@@ -10,3 +10,9 @@ class RoleName(str, Enum):
     SUPERVISORY_OFFICER = "supervisory_officer"
     AUDIT_REVIEW_OFFICER = "audit_review_officer"
     ADMIN = "admin"
+
+class VerificationStatus(str, Enum):
+    NOT_REQUIRED = "not_required"  # staff accounts created by an admin
+    PENDING = "pending"            # citizen registered, waiting for an officer
+    VERIFIED = "verified"          # officer approved, citizen may log in
+    REJECTED = "rejected"          # officer rejected, citizen may re-apply

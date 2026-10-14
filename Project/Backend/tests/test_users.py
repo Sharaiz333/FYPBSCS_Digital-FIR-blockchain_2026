@@ -5,11 +5,7 @@ The env vars MUST be set before the app is imported.
 """
 import os
 
-os.environ["DATABASE_URL"] = "sqlite:///./test_users.db"
-os.environ["JWT_SECRET_KEY"] = "test-secret"
-
 import pytest
-from fastapi.testclient import TestClient
 from sqlmodel import Session
 
 from app.core.database import engine
@@ -17,16 +13,6 @@ from app.core.security import hash_password
 from app.main import app
 from app.models.enums import RoleName
 from app.models.user import User
-
-
-@pytest.fixture(scope="module")
-def client():
-    if os.path.exists("./test_users.db"):
-        os.remove("./test_users.db")
-    with TestClient(app) as c:
-        yield c
-    if os.path.exists("./test_users.db"):
-        os.remove("./test_users.db")
 
 
 def _make_user(username: str, role: RoleName, password: str = "Pass12345") -> str:

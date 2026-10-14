@@ -6,8 +6,22 @@ from app.models.enums import RoleName
 from app.core.database import get_session
 from app.core.security import decode_token
 from app.models.user import User
+from app.models.enums import RoleName, VerificationStatus
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/auth/login")
+
+
+def get_current_user(token: str = Depends(oauth2_scheme), session: Session = Depends(get_session)) -> User:
+    error = HTTPException(status.HTTP_401_UNAUTHORIZED, "Could not validate credentials")
+    payload = decode_token(token)
+    if not payload or payload.get("type") != "access":
+        raise error
+    user = session.get(User, payload.get("sub"))
+    if not user or not user.is_active:
+        raise error
+    if user.verification_status not in (VerificationStatus.NOT_REQUIRED, VerificationStatus.VERIFIED):
+        raise error
+    return user
 
 def require_role(*allowed_roles: RoleName):
     """Usage: current_user: User = Depends(require_role(RoleName.ADMIN))"""
@@ -19,14 +33,3 @@ def require_role(*allowed_roles: RoleName):
         return current_user
 
     return _checker
-
-
-def get_current_user(token: str = Depends(oauth2_scheme), session: Session = Depends(get_session)) -> User:
-    error = HTTPException(status.HTTP_401_UNAUTHORIZED, "Could not validate credentials")
-    payload = decode_token(token)
-    if not payload or payload.get("type") != "access":
-        raise error
-    user = session.get(User, payload.get("sub"))
-    if not user or not user.is_active:
-        raise error
-    return user
