@@ -5,6 +5,8 @@ import { Navbar } from "./components/Navbar";
 import Login from "./pages/Login";
 import { DashboardPage } from "./pages/Dashboard";
 import { ComplaintNewPage } from "./pages/ComplaintNew";
+import Register from "./pages/Register";
+import { VerificationQueuePage } from "./pages/VerificationQueue";
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -21,6 +23,10 @@ function AppRoutes() {
     <Routes>
       <Route path="/login" element={auth ? <Navigate to="/" replace /> : <Login />} />
       <Route
+  path="/register"
+  element={auth ? <Navigate to="/" replace /> : <Register />}
+/>
+      <Route
         path="/"
         element={
           <ProtectedRoute>
@@ -33,13 +39,25 @@ function AppRoutes() {
       <Route
         path="/complaints/new"
         element={
-          <ProtectedRoute allowedRoles={["citizen"]}>
+          <ProtectedRoute allowedRoles={["citizen", "police_officer"]}>
             <Layout>
               <ComplaintNewPage />
             </Layout>
           </ProtectedRoute>
         }
       />
+      <Route
+  path="/verification"
+  element={
+    <ProtectedRoute
+      allowedRoles={["police_officer", "supervisory_officer"]}
+    >
+      <Layout>
+        <VerificationQueuePage />
+      </Layout>
+    </ProtectedRoute>
+  }
+/>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

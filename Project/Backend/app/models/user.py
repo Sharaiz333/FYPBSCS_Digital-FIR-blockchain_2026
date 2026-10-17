@@ -1,7 +1,9 @@
+
 import uuid
 from datetime import datetime, timezone
 
 from sqlmodel import Field, SQLModel
+from sqlalchemy import Enum as SAEnum
 
 from app.models.enums import RoleName, VerificationStatus
 
@@ -17,14 +19,22 @@ class User(SQLModel, table=True):
     role: RoleName = Field(index=True)
     is_active: bool = Field(default=True)
 
-    # Citizen registration details. Staff accounts leave these empty.
-    # CNIC is personal data: it stays in this database and is never put on the blockchain.
+    # Citizen registration details
     cnic: str | None = Field(default=None, index=True, unique=True)
     phone: str | None = None
     address: str | None = None
 
-    # Who vouched for this citizen's identity, and when.
-    verification_status: VerificationStatus = Field(default=VerificationStatus.NOT_REQUIRED, index=True)
+    # Verification status
+    verification_status: VerificationStatus = Field(
+        default=VerificationStatus.NOT_REQUIRED,
+        index=True,
+        sa_type=SAEnum(
+            VerificationStatus,
+            values_callable=lambda enum_cls: [item.value for item in enum_cls],
+            name="verificationstatus",
+        ),
+    )
+
     verified_by: str | None = Field(default=None, foreign_key="users.user_id")
     verified_at: datetime | None = None
     rejection_reason: str | None = None

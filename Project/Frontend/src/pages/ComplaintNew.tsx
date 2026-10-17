@@ -26,9 +26,11 @@ const EMPTY_VALUES: ComplaintFormValues = {
 
 export function ComplaintNewPage() {
   const { auth } = useAuth();
-  const [values, setValues] = useState<ComplaintFormValues>({
+  const isOfficer = auth?.role === "police_officer";
+  const defaultName = isOfficer ? "" : auth?.fullName ?? "";
+    const [values, setValues] = useState<ComplaintFormValues>({
     ...EMPTY_VALUES,
-    complainantName: auth?.fullName ?? "",
+    complainantName: defaultName,
   });
   const [touched, setTouched] = useState<Partial<Record<FieldName, boolean>>>({});
   const [declared, setDeclared] = useState(false);
@@ -95,7 +97,7 @@ export function ComplaintNewPage() {
   }
 
   function fileAnother() {
-    setValues({ ...EMPTY_VALUES, complainantName: auth?.fullName ?? "" });
+    setValues({ ...EMPTY_VALUES, complainantName: defaultName });
     setTouched({});
     setDeclared(false);
     setSubmitAttempted(false);
@@ -109,15 +111,14 @@ export function ComplaintNewPage() {
         <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-100 text-xl text-green-700">
           ✓
         </div>
-        <h1 className="text-xl font-semibold text-navy-900">Complaint submitted</h1>
-        <p className="mt-2 text-sm text-slate-500">Keep this reference number to track your complaint.</p>
-        <p className="mt-4 rounded-lg bg-slate-100 py-3 font-mono text-lg font-semibold text-navy-900">
-          {referenceNumber}
-        </p>
-        <p className="mt-3 text-xs text-slate-400">
-          This is a complaint reference, not an FIR number. An FIR number is issued only if police review
-          approves the complaint.
-        </p>
+ <h1 className="text-xl font-semibold text-navy-900">
+  {isOfficer ? "Register Walk-in Complaint" : "File a Complaint"}
+</h1>
+<p className="mt-1 text-sm text-slate-500">
+  {isOfficer
+    ? "Record a complaint on behalf of a citizen visiting the police station."
+    : "Provide accurate details. Police will review your complaint before an FIR is created."}
+</p>
         {COMPLAINT_SERVICE_IS_MOCK && (
           <p className="mt-4 rounded bg-amber-50 p-3 text-xs text-amber-700">
             Demo mode: this complaint was NOT saved anywhere. Saving is added when the backend is connected.
@@ -158,7 +159,9 @@ export function ComplaintNewPage() {
       <form onSubmit={handleSubmit} noValidate className="space-y-6">
         {/* Incident details */}
         <section className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="mb-4 text-base font-semibold text-navy-900">Incident details</h2>
+          <h2 className="mb-1 text-base font-semibold text-navy-900">
+  {isOfficer ? "Citizen / Complainant Details" : "Your details"}
+</h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <FormField id="stationId" label="Police station" required error={visibleErrors.stationId}>
               <select {...fieldProps("stationId")}>
@@ -259,8 +262,9 @@ export function ComplaintNewPage() {
               className="mt-0.5 h-4 w-4 rounded border-slate-300 text-accent-600 focus:ring-accent-600"
             />
             <span>
-              I confirm that the information above is true to the best of my knowledge. I understand that
-              giving false information to the police is an offence.
+              {isOfficer
+  ? "I confirm that I have recorded the citizen's statement accurately and that the information provided is true to the best of my knowledge."
+  : "I confirm that the information above is true to the best of my knowledge. I understand that giving false information to the police is an offence."}
             </span>
           </label>
           {declarationError && (

@@ -19,14 +19,26 @@ export function DashboardPage() {
       <h1 className="text-xl font-semibold text-navy-900">Welcome, {auth.fullName}</h1>
       <p className="mt-2 text-sm text-slate-500">{ROLE_DESCRIPTIONS[auth.role]}</p>
 
-      {auth.role === "citizen" && (
-        <Link
-          to="/complaints/new"
-          className="mt-6 inline-block rounded-lg bg-accent-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-accent-700"
-        >
-          + File a New Complaint
-        </Link>
-      )}
+      {(auth.role === "citizen" || auth.role === "police_officer") && (
+  <Link
+    to="/complaints/new"
+    className="mt-6 inline-block rounded-lg bg-accent-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-accent-700"
+  >
+    {auth.role === "police_officer"
+      ? "+ Register Walk-in Complaint"
+      : "+ File a New Complaint"}
+  </Link>
+)}
+
+{(auth.role === "police_officer" ||
+  auth.role === "supervisory_officer") && (
+  <Link
+    to="/verification"
+    className="ml-3 mt-6 inline-block rounded-lg bg-blue-700 px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-800"
+  >
+    View Verification Queue
+  </Link>
+)}
 
       <p className="mt-6 rounded bg-amber-50 p-3 text-xs text-amber-700">
         This is a placeholder dashboard. Real FIR lists and role-specific content are built in later stages.

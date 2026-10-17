@@ -1,5 +1,5 @@
 import { FormEvent, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 export default function Login() {
@@ -22,12 +22,25 @@ export default function Login() {
     try {
       await login(username, password);
       navigate("/");
-    } catch (err: any) {
-      setError(
-        err?.response?.status === 401
-          ? "Invalid username or password."
-          : "Cannot reach the server. Please try again."
-      );
+        } catch (err: any) {
+      const status = err?.response?.status;
+      const detail = err?.response?.data?.detail;
+
+      if (status === 401) {
+        setError("Invalid username or password.");
+      } else if (status === 403) {
+        setError(
+          typeof detail === "string"
+            ? detail
+            : "Your account is awaiting verification or access has been denied."
+        );
+      } else {
+        setError(
+          typeof detail === "string"
+            ? detail
+            : "Cannot reach the server. Please try again."
+        );
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -41,12 +54,14 @@ export default function Login() {
         </h2>
 
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
+          
           <div>
             <label
               htmlFor="username"
               className="mb-2 block text-sm font-medium text-slate-700"
             >
               Username
+            
             </label>
 
             <input
@@ -113,6 +128,15 @@ export default function Login() {
             {isSubmitting ? "Logging in..." : "Log In"}
           </button>
         </form>
+        <p className="mt-5 text-center text-sm text-slate-600">
+  New citizen?{" "}
+  <Link
+    to="/register"
+    className="font-medium text-blue-700 hover:underline"
+  >
+    Create an account
+  </Link>
+</p>
       </div>
     </div>
   );
