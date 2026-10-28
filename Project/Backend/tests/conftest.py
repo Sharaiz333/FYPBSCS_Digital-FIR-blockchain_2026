@@ -1,7 +1,11 @@
+
 """
-Shared test setup. pytest loads this file BEFORE any test module, so the
-environment variables are set before the app (and its cached settings) are imported.
+Shared test setup.
+
+Tests create tables directly from SQLModel metadata.
+The application itself no longer creates tables at startup.
 """
+
 import os
 
 os.environ["DATABASE_URL"] = "sqlite:///./test_run.db"
@@ -11,22 +15,25 @@ import pytest
 from fastapi.testclient import TestClient
 from sqlmodel import SQLModel
 
-import app.models  # noqa: F401  (makes sure every table is registered)
+import app.models  # noqa: F401
 from app.core.database import engine
 from app.main import app
 
 
 @pytest.fixture(scope="module")
 def client():
-    # Every test file starts from empty tables, so files can't affect each other.
     SQLModel.metadata.drop_all(engine)
-    with TestClient(app) as c:  # app startup re-creates the tables
-        yield c
+    SQLModel.metadata.create_all(engine)
+
+    with TestClient(app) as test_client:
+        yield test_client
 
 
 @pytest.fixture(scope="session", autouse=True)
-def _remove_test_database_file():
+def remove_test_database_file():
     yield
+
     engine.dispose()
+
     if os.path.exists("./test_run.db"):
         os.remove("./test_run.db")

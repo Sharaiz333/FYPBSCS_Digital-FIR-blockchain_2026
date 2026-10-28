@@ -1,0 +1,19 @@
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: digitalfir-postgres
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: digitalfir
+      POSTGRES_USER: digitalfir_user
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+    external: true
+    name: ee18e78af6d4114c22f8b7962867eaa8fc3e2c0995f47016849c0ffa370884fd

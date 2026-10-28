@@ -1,4 +1,2 @@
-# Import every SQLModel table class here so SQLModel.metadata.create_all
-# (called in core/database.py) knows about it. This is the one place a
-# new model file must be registered.
+# Register all SQLModel table classes for Alembic.
 from app.models.user import User  # noqa: F401

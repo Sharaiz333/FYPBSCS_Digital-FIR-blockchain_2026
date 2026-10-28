@@ -1,13 +1,18 @@
+
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "backend"))
+sys.path.insert(
+    0,
+    str(Path(__file__).resolve().parents[2] / "backend"),
+)
 
 from sqlmodel import Session, select
-from app.core.database import engine, init_db
+from app.core.database import engine
 from app.core.security import hash_password
 from app.models.enums import RoleName
 from app.models.user import User
+
 
 # Development-only demo accounts with synthetic data.
 DEMO_USERS = [
@@ -19,13 +24,31 @@ DEMO_USERS = [
     ("Demo Citizen", "citizen1", "Pass1234", RoleName.CITIZEN),
 ]
 
-init_db()
-with Session(engine) as session:
-    for full_name, username, password, role in DEMO_USERS:
-        if session.exec(select(User).where(User.username == username)).first():
-            print(f"skip {username}")
-            continue
-        session.add(User(full_name=full_name, username=username,
-                         password_hash=hash_password(password), role=role))
-        print(f"created {username} ({role.value})")
-    session.commit()
+
+def seed_users():
+    with Session(engine) as session:
+        for full_name, username, password, role in DEMO_USERS:
+            existing_user = session.exec(
+                select(User).where(User.username == username)
+            ).first()
+
+            if existing_user:
+                print(f"User '{username}' already exists; skipping.")
+                continue
+
+            user = User(
+                full_name=full_name,
+                username=username,
+                password_hash=hash_password(password),
+                role=role,
+            )
+
+            session.add(user)
+            print(f"Prepared demo user: {username}")
+
+        session.commit()
+        print("Demo user seeding completed.")
+
+
+if __name__ == "__main__":
+    seed_users()

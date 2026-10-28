@@ -37,6 +37,7 @@ logs/
 *.sql
 *.sqlite
 *.sqlite3
+digitalfir_backup.dump
 
 # Node.js
 
